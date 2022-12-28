@@ -116,7 +116,7 @@ app.use(showModal)
   <script lang="ts">
      
      import { defineComponent, onMounted, onBeforeUnmount } from "vue"
-     import { lazyLoad } from "jlfront/static"
+     import { lazyLoad } from "@mobile/design-vue"
      export default defineComponent({
        setup() {
          onMounted(() => {
@@ -268,7 +268,7 @@ app.use(showModal)
 
 ## Storage 使用
 ```
-  import { Store } from '@mobile/static' 
+  import { Store } from '@mobile/design-vue' 
   Store.set("name", {age: 1}, "local") //localStorage
   Store.get("name", "local")
   Store.set("name", {age: 1}, "session") //sessionStorage
