@@ -1,0 +1,62 @@
+:root {
+  --header-height: 128px;
+  --state-height: 40px;
+  --gray-color03: rgb(25 28 28 / 3%);
+  --gray-color05: rgb(25 28 28 / 5%);
+  --gray-color08: rgb(25 28 28 / 8%);
+  --gray-color10: rgb(25 28 28 / 10%);
+  --gray-color15: rgb(25 28 28 / 15%);
+  --gray-color20: rgb(25 28 28 / 20%);
+  --gray-color30: rgb(25 28 28 / 30%);
+  --gray-color40: rgb(25 28 28 / 40%);
+  --gray-color55: rgb(25 28 28 / 55%);
+  --gray-color70: rgb(25 28 28 / 70%);
+  --gray-color75: rgb(25 28 28 / 75%);
+  --gray-color80: rgb(25 28 28 / 80%);
+  --gray-color100: rgb(25 28 28 / 100%);
+  --text-color: #16d2d7;
+  --main-bgcolor: #f5f8fa;
+}
+
+body {
+  font-size: 24px;
+  font-family: PingFangSC-Regular, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei UI',
+    'Microsoft YaHei', 'Source Han Sans CN', sans-serif;
+  color: var(--gray-color100);
+  background: #fff;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 100px;
+}
+
+body,
+html {
+  overflow: hidden;
+  height: 100vh;
+}
+
+#app {
+  height: 100%;
+}
+
+.page-view {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.scroll-view-wrapper {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-right: 5%;
+  width: 105%;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+}

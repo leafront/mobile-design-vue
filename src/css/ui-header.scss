@@ -1,0 +1,53 @@
+.ui-header-wrapper {
+  position: relative;
+  z-index: 100;
+  height: var(--header-height);
+}
+
+.ui-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background: #fff;
+  transform: translateZ(0);
+}
+
+.ui-header-info {
+  position: relative;
+  height: 88px;
+}
+
+.ui-header-state {
+  height: var(--state-height);
+}
+
+.ui-header-title {
+  position: absolute;
+  left: 50%;
+  min-width: 350px;
+  height: 80px;
+  transform: translateX(-50%);
+
+  span {
+    line-height: 80px;
+  }
+}
+
+.ui-header-back {
+  padding: 0 24px;
+  height: 100%;
+
+  i {
+    width: 48px;
+    height: 48px;
+    background-image: url('/staticPath/h5-static/img/icon-left-black.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  .icon-close {
+    background-image: url('/staticPath/h5-static/img/icon-nav-close.png');
+  }
+}

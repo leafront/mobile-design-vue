@@ -1,0 +1,52 @@
+.ui-showModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  width: 646px;
+  border-radius: 32px;
+  transform: translate(-50%, -50%);
+  animation: scaleIn 0.4s;
+}
+
+.ui-showModal-submit {
+  margin-top: 48px;
+
+  span,
+  strong {
+    width: 284px;
+    height: 88px;
+    line-height: 88px;
+    border-radius: 44px;
+  }
+
+  span {
+    border: 2px solid rgb(25 28 28 / 50%);
+  }
+
+  strong {
+    color: #fff;
+    background: var(--text-color);
+  }
+
+  .confirm-row {
+    width: 100%;
+  }
+}
+
+.ui-showModal-title {
+  line-height: 56px;
+  margin-bottom: 32px;
+
+  h5 {
+    line-height: 56px;
+  }
+}
+
+.ui-showModal-cont {
+  p {
+    word-wrap: break-word;
+    color: rgb(25 28 28 / 75%);
+  }
+}

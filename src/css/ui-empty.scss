@@ -1,0 +1,21 @@
+.ui-empty {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  transform: translateY(-50%);
+
+  .ui-empty-pic {
+    width: 256px;
+    height: 256px;
+    background-image: url('/staticPath/h5-static/img/empty-bg.png?v=202207111103');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  span {
+    margin-top: 16px;
+    color: rgb(25 28 28 / 55%);
+  }
+}

@@ -1,0 +1,57 @@
+.ui-overlay-container {
+  position: fixed;
+  z-index: 1000;
+}
+
+.ui-overlay-container-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ui-overlay-container-center-active {
+  animation: scaleIn 0.4s;
+}
+
+.ui-overlay-container-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.ui-overlay-container-bottom-active {
+  animation: slideUp 0.4s;
+}
+
+.ui-overlay-center-close {
+  position: absolute;
+  bottom: -124px;
+  left: 50%;
+  padding: 20px;
+  transform: translateX(-50%);
+
+  i {
+    display: block;
+    width: 72px;
+    height: 72px;
+    background: url('/staticPath/h5-static/img/icon-overlay-center-close.png') no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+.ui-overlay-bottom-close {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  padding: 24px;
+  width: 88px;
+  height: 88px;
+
+  i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('/staticPath/h5-static/img/icon-overlay-bottom-close.png') no-repeat;
+    background-size: 100% auto;
+  }
+}

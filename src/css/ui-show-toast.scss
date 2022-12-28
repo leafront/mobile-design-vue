@@ -1,0 +1,45 @@
+@keyframes showToastIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ui-toast-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.ui-toast {
+  padding: 24px 32px;
+  animation: showToastIn 0.4s;
+  max-width: 456px;
+  background: var(--gray-color70);
+  border-radius: 16px;
+}
+
+.ui-toast span {
+  display: block;
+  line-height: 44px;
+  font-size: 28px;
+  color: #fff;
+  word-break: break-all;
+}

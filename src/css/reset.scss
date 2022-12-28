@@ -1,0 +1,119 @@
+html {
+  touch-action: manipulation;
+}
+
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+input,
+textarea,
+p,
+button,
+aside,
+section,
+article,
+nav,
+header,
+footer,
+span {
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  box-sizing: border-box;
+}
+div {
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  box-sizing: border-box;
+}
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+fieldset,
+img,
+button {
+  border: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  font-size: 100%;
+  font-family: inherit;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+iframe {
+  display: none;
+}
+
+input,
+select,
+textarea,
+button {
+  border: 0;
+  outline: none;
+  appearance: none;
+  user-select: text;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px transparent inset;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: var(--gray-color30);
+}
+
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}

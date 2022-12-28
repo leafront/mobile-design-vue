@@ -1,0 +1,79 @@
+{
+  "name": "@mobile/design-vue",
+  "version": "1.3.5",
+  "author": {
+    "name": "yeliang",
+    "email": "yeliang@basestonedata.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.xiaoxiangyoupin.com:9443/yeliang/hobbydesign.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/h5-static/design-vue@1.3.5/design-vue.es.prod.js",
+  "module": "./dist/h5-static/design-vue@1.3.5/design-vue.es.prod.js",
+  "exports": {
+    ".": "./dist/h5-static/design-vue@1.3.5/design-vue.es.prod.js",
+    "./package.json": "./package.json"
+  },
+  "homepage": "https://gitlab.xiaoxiangyoupin.com:9443/yeliang/hobbydesign",
+  "scripts": {
+    "build:prod": "vue-tsc --noEmit && vite build && node sassPack.js",
+    "build:publish": "npm run build:prod && yarn publish",
+    "build:css": "sudo node sassPack.js",
+    "lint": "eslint --fix ./src --ext .vue,.ts,.js",
+    "format": "prettier --write \"./src/**/*.{vue,ts,js,scss,css,json}\"",
+    "lint:style": "stylelint --fix \"./src/**/*.{css,scss,vue}\""
+  },
+  "devDependencies": {
+    "@babel/types": "^7.18.10",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/compiler-sfc": "^3.2.38",
+    "better-scroll": "^2.4.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.1",
+    "install": "^0.13.0",
+    "lint-staged": "^13.0.3",
+    "pinia": "^2.0.14",
+    "postcss": "^8.4.16",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.7.1",
+    "rollup-plugin-shell": "^1.0.8",
+    "sass": "^1.54.2",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-scss": "^7.0.0",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.7.4",
+    "url-search-params-polyfill": "^8.1.1",
+    "vite": "^3.0.9",
+    "vite-plugin-html": "^3.2.0",
+    "vue": "^3.2.38",
+    "vue-router": "^4.1.5",
+    "vue-tsc": "^0.40.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js,vue}": [
+      "npm run lint",
+      "npm run format"
+    ],
+    "src/**/*.{css,scss,vue}": [
+      "npm run lint:style"
+    ]
+  }
+}
