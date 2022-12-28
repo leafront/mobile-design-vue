@@ -1,9 +1,12 @@
 {
-  "name": "@mobile/design-vue",
+  "name": "@leafront/design-vue",
   "version": "0.1.0",
   "author": {
     "name": "leafront",
     "email": "leafront@126.com"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
