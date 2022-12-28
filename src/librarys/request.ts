@@ -32,7 +32,7 @@ function removeStorageData(times: number): void {
   })
 }
 
-function xhr({
+function requestPromise({
   hostPath = location.origin,
   url,
   timeout = 60000,
@@ -115,13 +115,13 @@ export default function dispatchRequest(
     }
 
     if (successCallback && failCallback) {
-      return xhr(options)
+      return requestPromise(options)
         .then(successCallback, failCallback)
         .then((result) => {
           return setResponseData(result)
         })
     } else {
-      return xhr(options).then(({ result }) => {
+      return requestPromise(options).then(({ result }) => {
         return setResponseData(result)
       })
     }
