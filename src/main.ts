@@ -12,7 +12,6 @@ import ScrollList from './components/ScrollList'
 export * from './librarys/utils'
 export * from './hooks/headerHeight'
 export * from './hooks/fixedElement'
-export * from './librarys/appBridge'
 export * from './librarys/store'
 
 export {
