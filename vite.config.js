@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import shell from 'rollup-plugin-shell'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const designVueV = require('./package.json').version
 
 const exportDesignVuePath = `./dist/h5-static/design-vue@${designVueV}/design-vue.es.prod.js`
@@ -14,10 +15,13 @@ const banner = `/*!
 export default defineConfig({
   plugins: [
     vue(),
-    shell({ commands: [
+    shell({
+      commands: [
         'sudo rm -rf dist',
-        `npm pkg set main="${exportDesignVuePath}" module="${exportDesignVuePath}" exports["."]="${exportDesignVuePath}"`,
-      ], hook: 'buildStart' }),
+        `npm pkg set main="${exportDesignVuePath}" module="${exportDesignVuePath}" exports["."]="${exportDesignVuePath}"`
+      ],
+      hook: 'buildStart'
+    })
   ],
   build: {
     polyfillModulePreload: false,
@@ -29,9 +33,9 @@ export default defineConfig({
         banner,
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {
-          "vue": "Vue",
-          "vue-router": "VueRouter",
-          'pinia': "Pinia"
+          vue: 'Vue',
+          'vue-router': 'VueRouter',
+          pinia: 'Pinia'
         }
       }
     },
@@ -54,4 +58,3 @@ export default defineConfig({
     cssCodeSplit: false
   }
 })
-
