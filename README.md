@@ -1,6 +1,6 @@
 ## hobby/design-vue
 
-npm install @leafront/design-vue
+npm install --save-dev @leafront/design-vue
 
 ## 常规项目代码目录
 
