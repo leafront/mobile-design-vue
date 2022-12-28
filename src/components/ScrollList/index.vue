@@ -20,7 +20,6 @@ export default defineComponent({
   },
   emits: ['update:finished', 'update:loading', 'onLoad'],
   setup(props, { emit }) {
-
     const scrollLoadList = throttle(() => {
       const el: HTMLDivElement = document.querySelector('.scroll-view-wrapper')
       const elHeight = el.offsetHeight

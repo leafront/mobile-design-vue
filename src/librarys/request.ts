@@ -1,5 +1,5 @@
 import { queryStringify } from './utils'
-import Store from './store'
+import { localStore } from './store'
 import { isLocalStorageSupported } from './fun'
 
 interface RequestFn {
@@ -25,9 +25,9 @@ function removeStorageData(times: number): void {
     return
   }
   Object.keys(storage).forEach((item) => {
-    const data = Store.get(item, 'local')
+    const data = localStore.get(item)
     if (data && data.times && times > data.times) {
-      Store.remove(item, 'local')
+      localStore.remove(item)
     }
   })
 }
@@ -95,7 +95,7 @@ export default function dispatchRequest(
     hostPath
   }
   const times = new Date().getTime()
-  const storeData = Store.get(hostPath + cacheUrl, 'local')
+  const storeData = localStore.get(hostPath + cacheUrl)
 
   if (cache && storeData) {
     const cacheTime = data.times
@@ -109,7 +109,7 @@ export default function dispatchRequest(
         results
       }
       if (results && cache) {
-        Store.set(hostPath + cacheUrl, data, 'local')
+        localStore.set(hostPath + cacheUrl, data)
       }
       return Promise.resolve(results)
     }

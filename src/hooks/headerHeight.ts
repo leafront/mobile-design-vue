@@ -1,13 +1,13 @@
 import { ref } from 'vue'
 import { getStatusBarHeight } from '../librarys/appBridge'
 import { getFontSize, isApp } from '../librarys/utils'
-import Store from '../librarys/store'
+import { localStore } from '../librarys/store'
 
 export function useHeaderHeight(setContainerStyle = true) {
   const fontSize = getFontSize()
   const stateHeight = ref<number>(fontSize * 0.4)
   const headerHeight = ref<number>(fontSize * 0.88)
-  const storeStatusHeight = Number(Store.get('stateHeight', 'local'))
+  const storeStatusHeight = Number(localStore.get('stateHeight'))
 
   const setHeaderHeight = (stateHeightVal): void => {
     const headerHeightVal = Number(stateHeightVal) + 0.88 * fontSize
@@ -19,7 +19,7 @@ export function useHeaderHeight(setContainerStyle = true) {
       el.style.setProperty('--header-height', headerHeightVal + 'px')
     }
     if (!storeStatusHeight) {
-      Store.set('stateHeight', stateHeightVal, 'local')
+      localStore.set('stateHeight', stateHeightVal)
     }
   }
 

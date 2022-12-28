@@ -1,4 +1,3 @@
-import Store from './librarys/store'
 import httpRequest from './librarys/request'
 import validate from './librarys/validate'
 import loading from './plugins/loading'
@@ -13,9 +12,10 @@ import ScrollList from './components/ScrollList'
 export * from './librarys/utils'
 export * from './hooks/headerHeight'
 export * from './hooks/fixedElement'
+export * from './librarys/appBridge'
+export * from './librarys/store'
 
 export {
-  Store,
   httpRequest,
   validate,
   lazyLoad,

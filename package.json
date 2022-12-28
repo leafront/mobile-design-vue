@@ -21,7 +21,7 @@
   "homepage": "https://gitlab.xiaoxiangyoupin.com:9443/yeliang/hobbydesign",
   "scripts": {
     "build:prod": "vue-tsc --noEmit && vite build && node sassPack.js",
-    "build:publish": "npm run build:prod && yarn publish",
+    "build:publish": "npm run build:prod && npm publish",
     "build:css": "sudo node sassPack.js",
     "lint": "eslint --fix ./src --ext .vue,.ts,.js",
     "format": "prettier --write \"./src/**/*.{vue,ts,js,scss,css,json}\"",
