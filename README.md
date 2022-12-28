@@ -1,4 +1,3 @@
-## hobby/design-vue
 
 npm install --save-dev @leafront/design-vue
 
