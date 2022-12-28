@@ -18,7 +18,6 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
-import { back } from '../../librarys/appBridge'
 import { isApp } from '../../librarys/utils'
 import { useHeaderHeight } from '../../hooks/headerHeight'
 import { useFixedElement } from '../../hooks/fixedElement'
@@ -50,11 +49,7 @@ export default defineComponent({
       if (attrs.onBackEvent) {
         emit('backEvent')
       } else {
-        if (isAppVal.value) {
-          back()
-        } else {
-          router.back()
-        }
+        router.back()
       }
     }
 

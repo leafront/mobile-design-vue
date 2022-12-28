@@ -15,9 +15,9 @@ export default defineConfig({
   plugins: [
     vue(),
     shell({ commands: [
-      'sudo rm -rf dist',
-      `npm pkg set main="${exportDesignVuePath}" module="${exportDesignVuePath}" exports["."]="${exportDesignVuePath}"`,
-    ], hook: 'buildStart' }),
+        'sudo rm -rf dist',
+        `npm pkg set main="${exportDesignVuePath}" module="${exportDesignVuePath}" exports["."]="${exportDesignVuePath}"`,
+      ], hook: 'buildStart' }),
   ],
   build: {
     polyfillModulePreload: false,
@@ -46,10 +46,10 @@ export default defineConfig({
       entry: 'src/main.ts',
       name: 'mobileDesignVue',
       fileName: (format) => {
-        format = format.replace(/umd/,'global')
+        format = format.replace(/umd/, 'global')
         return `design-vue.${format}.prod.js`
       },
-      formats: ['umd','es']
+      formats: ['umd', 'es']
     },
     cssCodeSplit: false
   }
