@@ -1,6 +1,6 @@
 {
   "name": "@leafront/design-vue",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "name": "leafront",
     "email": "leafront@126.com"
@@ -15,10 +15,10 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/h5-static/design-vue@0.1.1/design-vue.es.prod.js",
-  "module": "./dist/h5-static/design-vue@0.1.1/design-vue.es.prod.js",
+  "main": "./dist/h5-static/design-vue@0.1.3/design-vue.es.prod.js",
+  "module": "./dist/h5-static/design-vue@0.1.3/design-vue.es.prod.js",
   "exports": {
-    ".": "./dist/h5-static/design-vue@0.1.1/design-vue.es.prod.js",
+    ".": "./dist/h5-static/design-vue@0.1.3/design-vue.es.prod.js",
     "./package.json": "./package.json"
   },
   "homepage": "https://github.com/leafront/mobile-design-vue/tree/main/#readme",
