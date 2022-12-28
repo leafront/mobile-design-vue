@@ -264,11 +264,11 @@ app.use(showModal)
 | show | 是否显示 | false |
 | closeButton | 是否需要关闭按钮 | false |
 
-## Storage 使用
+## Store 使用
 ```
-  import { Store } from '@mobile/design-vue' 
-  Store.set("name", {age: 1}, "local") //localStorage
-  Store.get("name", "local")
-  Store.set("name", {age: 1}, "session") //sessionStorage
-  Store.get("name", "session")
+  import { localStore, sessionStore } from '@mobile/design-vue' 
+  localStore.set("name", {age: 1}) //localStorage
+  localStore.get("name")
+  sessionStore.set("name", {age: 1}) //sessionStorage
+  sessionStore.get("name")
 ```
