@@ -22,9 +22,9 @@ export default defineComponent({
   setup(props, { emit }) {
     const scrollLoadList = throttle(() => {
       const el: HTMLDivElement = document.querySelector('.scroll-view-wrapper')
-      const elHeight = el.offsetHeight
-      const scrollTop = el.scrollTop
-      const scrollViewHeight = el.scrollHeight - 10
+      const elHeight: number = el.offsetHeight
+      const scrollTop: number = el.scrollTop
+      const scrollViewHeight: number = el.scrollHeight - 10
       if (elHeight + scrollTop >= scrollViewHeight && !props.finished) {
         emit('update:loading', true)
         emit('onLoad')

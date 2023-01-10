@@ -2,7 +2,8 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
   extends: [
     'prettier',
@@ -32,6 +33,7 @@ module.exports = {
     'vue/attribute-hyphenation': 'off',
     'prettier/prettier': 'error',
     'vue/require-explicit-emits': 'off',
-    '@typescript-eslint/no-this-alias': 'off'
+    '@typescript-eslint/no-this-alias': 'off',
+    '@typescript-eslint/no-var-requires': 'off'
   }
 }

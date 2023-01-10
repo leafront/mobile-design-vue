@@ -9,6 +9,7 @@ import PageLoading from './components/PageLoading'
 import Empty from './components/Empty'
 import Overlay from './components/Overlay'
 import ScrollList from './components/ScrollList'
+import Swiper from './components/Swiper'
 export * from './librarys/utils'
 export * from './hooks/headerHeight'
 export * from './hooks/fixedElement'
@@ -25,5 +26,6 @@ export {
   PageLoading,
   Empty,
   Overlay,
-  ScrollList
+  ScrollList,
+  Swiper
 }

@@ -5,7 +5,8 @@ const pxtorem = require('postcss-pxtorem')
 const { execSync } = require('child_process')
 const designVueV = require('./package.json').version
 
-const comment = '/*!\n' +
+const comment =
+  '/*!\n' +
   ` * design-vue.css  v${designVueV} \n` +
   ` * Copyright(c) 2013-${new Date().getFullYear()} \n` +
   ' * Released under the MIT License.\n' +
@@ -21,14 +22,19 @@ const options = {
   mediaQuery: false,
   minPixelValue: 0
 }
-const processedCss = postcss(pxtorem(options)).process(compressed.css).css;
+const processedCss = postcss(pxtorem(options)).process(compressed.css).css
 
 execSync(`mkdir -m 0777 -p ./dist/h5-static/css/design-vue@${designVueV}`)
 
-fs.writeFile(`./dist/h5-static/css/design-vue@${designVueV}/index.css`, comment + processedCss, 'utf-8', () => {
-  try {
-    console.log('scss打包成功')
-  } catch (e) {
-    console.log('写入内容失败', e)
+fs.writeFile(
+  `./dist/h5-static/css/design-vue@${designVueV}/index.css`,
+  comment + processedCss,
+  'utf-8',
+  () => {
+    try {
+      console.log('scss打包成功')
+    } catch (e) {
+      console.log('写入内容失败', e)
+    }
   }
-})
+)

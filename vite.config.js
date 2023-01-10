@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import shell from 'rollup-plugin-shell'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const designVueV = require('./package.json').version
 
 const exportDesignVuePath = `./dist/h5-static/design-vue@${designVueV}/design-vue.es.prod.js`
@@ -48,7 +47,7 @@ export default defineConfig({
     },
     lib: {
       entry: 'src/main.ts',
-      name: 'mobileDesignVue',
+      name: 'designVue',
       fileName: (format) => {
         format = format.replace(/umd/, 'global')
         return `design-vue.${format}.prod.js`

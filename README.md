@@ -66,11 +66,9 @@ npm install --save-dev @leafront/design-vue
 
 ```
 ##  plugins 插件使用
-app.use(loading)
-app.use(showToast)
-app.use(showModal)
-```
 
+```
+  import { loading, showToast, showModal } from '@leafront/design-vue'
   import { getCurrentInstance } from "vue"
   const {
     proxy: { $showModal, $showToast, $showLoading, $hideLoading }
@@ -91,7 +89,7 @@ app.use(showModal)
 
 ##  lazyLoad 使用
 ```
-  main.ts
+  import { lazyLoad } from '@leafront/design-vue'
 
   const app = createApp(App as any)
   app.directive("lazy", {
@@ -131,7 +129,7 @@ app.use(showModal)
 ## header 组件
 
 ```
-  app.use(Header)
+  import { Header } from '@leafront/design-vue'
   <ui-header
     title="需求列表"
   >
@@ -148,7 +146,8 @@ app.use(showModal)
 ## 空状态组件
 
 ```
-  app.use(UiEmpty)
+  import { UiEmpty } from '@leafront/design-vue'
+ 
   <ui-empty
     title="暂时没有相关数据哦～"
     image="/h5-static/img/empty-bg.png"
@@ -161,12 +160,13 @@ app.use(showModal)
 | image | 图片地址 | /h5-static/img/empty-bg.png |
 
 ```
-  app.use(PageLoading)
+  import { PageLoading } from '@leafront/design-vue'
+
   <ui-page-loading></ui-page-loading> 底部loading
 ```
 ## 轮播图
 ```
-  app.use(Swiper)
+  import { Swiper } from '@leafront/design-vue'
   <ui-swiper
     :list="bannerList"
     :index="index"
@@ -209,46 +209,11 @@ app.use(showModal)
 | itemWidth | banner 宽度 | 750px |
 | itemHeight | banner 宽度 | 500px |
 
-## 日历日期
 
-```
-  <ui-date-picker
-    :startDate="2020"
-    :endDate="2022"
-    v-model:show="show"
-    v-model:value="dateValue"
-  >
-  </ui-date-picker>
-
-```
-
-| 参数名 | 描述 | 默认值 |
-| :----:  | :----: | :----: |
-| startDate | 开始日期 | 2010 |
-| endDate | 结束日期 | 2021 |
-| show | 是否显示 | false |
-| dateValue | 默认显示日期 | {year: '2021', month: '01', date: '01'} |
-
-## 城市地址
-
-```
-  <ui-address
-    :list="list"
-    v-model:show="show"
-    v-model:value="dateValue"
-  >
-  </ui-address>
-
-```
-
-| 参数名 | 描述 | 默认值 |
-| :----:  | :----: | :----: |
-| list | 省市区列表 | [] |
-| show | 是否显示 | false |
-| value | 默认显示城市 | { provinceName: "北京市", cityName: "北京市",areaName: "东城区",provinceCode: "11",cityCode: "1101",areaCode: "110101" } |
 
 ## 遮罩层
 ```
+  import { Overlay } from '@leafront/design-vue'
   <ui-overlay
     v-model:show="show3"
     fadeIn="bottom"  
@@ -266,7 +231,7 @@ app.use(showModal)
 
 ## Store 使用
 ```
-  import { localStore, sessionStore } from '@mobile/design-vue' 
+  import { localStore, sessionStore } from '@leafront/design-vue' 
   localStore.set("name", {age: 1}) //localStorage
   localStore.get("name")
   sessionStore.set("name", {age: 1}) //sessionStorage
